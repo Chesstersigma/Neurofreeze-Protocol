@@ -1,0 +1,13 @@
+using UnityEngine;
+
+public class Door : MonoBehaviour, IInteractable
+{
+    private bool isOpen = false;
+
+    public void OnInteract()
+    {
+        isOpen = !isOpen;
+        // Insert your open/close logic here (animation, rotation, etc.)
+        Debug.Log("Door " + (isOpen ? "opened" : "closed"));
+    }
+}
